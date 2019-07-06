@@ -1,0 +1,61 @@
+<!--
+**************************************************************
+Content populated by MediaElch 	-> http://www.mediaelch.de/
+Theme created by DigitalRabbit 	-> http://jasonhdoucette.com/
+TinyBox 3 						-> http://www.scriptiny.com/
+DataTables 						-> http://www.datatables.net/
+**************************************************************
+-->
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Movie Details</title>
+	<link rel="stylesheet" href="../css/fontello.css" />
+	<link rel="stylesheet" href="../css/details.css" />
+</head>
+
+<body>
+<table style="width:745px; heigh:445px;">
+	<tr>
+		<td class="title" colspan="2">
+			{{ MOVIE.TITLE }}
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="{{ IMAGE.POSTER[250,353] }}" />
+		</td>
+		<td class="specs">
+			<table style="width:100%">
+				<tr>
+					<td id="s">Release Date:</td>
+					<td>{{ MOVIE.YEAR }}</td>
+					<td id="s">Certification:</td>
+					<td>{{ MOVIE.CERTIFICATION }}</td>					
+				</tr>
+				<tr>
+					<td id="s">Runtime:</td>
+					<td>{{ MOVIE.RUNTIME }}</td>
+					<td id="s">Rating:</td>
+					<td>{{ MOVIE.RATING }}</td>					
+				</tr>
+			</table>
+			<br/>
+			<span class="tags">
+				{{ BEGIN_BLOCK_GENRES }}
+					<span class="genre">{{ GENRE.NAME }}</span><span class="spacer">&nbsp;</span>
+				{{ END_BLOCK_GENRES }}
+			</span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="plot">
+			<br/>
+			<cite id="s">{{ MOVIE.TAGLINE }}</cite>
+			<p>{{ MOVIE.PLOT }}</p>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!--
+**************************************************************
+Content populated by MediaElch 	-> http://www.mediaelch.de/
+Theme created by DigitalRabbit 	-> http://jasonhdoucette.com/
+TinyBox 3 						-> http://www.scriptiny.com/
+DataTables 						-> http://www.datatables.net/
+**************************************************************
+-->
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+
+		<title>Movie Collection</title>
+
+		<link rel="stylesheet" href="css/datatable.css" />
+		<link rel="stylesheet" href="css/tinybox.css" />
+		<style type="text/css">
+			body { max-width: 95%; margin: 0 auto; }
+		</style>
+
+		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="js/tinybox.js"></script>		
+		
+
+
+<script type="text/javascript" charset="utf-8">
+var aDataSet = [
+	{{ BEGIN_BLOCK_MOVIE }}
+		[ "<a href='javascript:' onclick='TINY.box.show({iframe:\042{{ MOVIE.LINK }}\042,boxid:\042frameless\042,width:750,height:450})'>{{ MOVIE.TITLE }}</a>", "{{ MOVIE.YEAR }}", "{{ MOVIE.RATING }}"],
+	{{ END_BLOCK_MOVIE }}
+];
+			
+			$(document).ready(function() {
+				$('#dynamic').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="movies"></table>' );
+				$('#movies').dataTable( {
+					"aaData": aDataSet,
+					"bPaginate": false,
+					"aoColumns": [
+						{ "sTitle": "Title", "sWidth": "400px"},
+						{ "sTitle": "Released", "sWidth": "40px" },
+						{ "sTitle": "Rating", "sWidth": "40px" }
+					]
+				} );	
+			} );
+		</script>
+	</head>
+
+	<body>
+			<h1>Movie Collection</h1>
+			<div id="dynamic"></div>
+			<div class="spacer"></div>
+			
+			<div class="push"></div>
+			<div class="footer"><br/><br/>
+				<a href="javascript:" onclick="TINY.box.show({iframe:'footer.html',boxid:'frameless',width:500,height:200})">Website Info</a>
+			</div>
+</body>
+</html>

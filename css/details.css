@@ -1,0 +1,15 @@
+body {margin:0px;}
+table {border: 0px; padding:0px;}
+tr {border:1px black solid;}
+td {vertical-align:bottom;}
+img {float:left; height:auto; width:250px; border-width:0px; vertical-align:top; padding:0px;}
+
+#s {font-weight:bold; vertical-align:bottom;}
+
+.title {font-weight:bold; font-size:2em; padding-left:25px; border-bottom: 5px double black;} 
+.plot {width: 100%; float:left; font-size:100%; padding:5px; vertical-align:top;}
+.specs {width:350px; border-bottom: 1px solid black;}
+.icons {font-size:40px; float:right;}
+.tags {padding-left:50px;}
+.tags .genre {float:left; font-size:18px; padding:5px; background-color:#E8E8E8;  -moz-border-radius: 10px; border-radius: 10px;}
+.tags .spacer {float:left; width: 10px;}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+	<name>DigitalRabbit - Datatables</name>
+	<identifier>digitalrabbit_datatables</identifier>
+	<description>DigitalRabbit - Datatable theme</description>
+	<description lang="en">DigitalRabbit - Datatable theme</description>
+	<author>Jason H Doucette</author>
+	<version>1.0</version>
+	<supports>
+		<section>movies</section>
+	</supports>
+</metadata>
