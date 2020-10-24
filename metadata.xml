@@ -2,10 +2,13 @@
 <metadata>
 	<name>DigitalRabbit - Datatables</name>
 	<identifier>digitalrabbit_datatables</identifier>
+	<website>https://github.com/mediaelch/mediaelch-theme-digitalrabbit-datatables</website>
 	<description>DigitalRabbit - Datatable theme</description>
-	<description lang="en">DigitalRabbit - Datatable theme</description>
+	<description lang="de">DigitalRabbit - Datatable Theme</description>
 	<author>Jason H Doucette</author>
 	<version>1.0</version>
+	<mediaelch-min>2.6.6</mediaelch-min>
+	<engine>simple</engine>
 	<supports>
 		<section>movies</section>
 	</supports>
